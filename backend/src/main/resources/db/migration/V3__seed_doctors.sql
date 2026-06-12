@@ -1,0 +1,18 @@
+INSERT INTO doctors (id, full_name, specialization, qualification, experience_years, city, country, hospital, contact_info, rating, license_number, created_at)
+VALUES
+  (gen_random_uuid(), 'Dr. Arjun Mehta',      'Cardiology',       'MD (Cardiology)',          15, 'Mumbai',    'India', 'Apollo Hospital',                         'contact@apollomumbai.in',     4.80, 'LIC-IN-CARD-001', now()),
+  (gen_random_uuid(), 'Dr. Priya Sharma',     'Cardiology',       'DM (Cardiology)',          12, 'Delhi',     'India', 'AIIMS Delhi',                             'contact@aiimsdel.in',         4.70, 'LIC-IN-CARD-002', now()),
+  (gen_random_uuid(), 'Dr. Kavita Nair',      'Cardiology',       'MD (Internal Medicine)',   10, 'Chennai',   'India', 'Fortis Malar Hospital',                   'contact@fortismalar.in',      4.60, 'LIC-IN-CARD-003', now()),
+  (gen_random_uuid(), 'Dr. Rohan Desai',      'Neurology',        'DM (Neurology)',           18, 'Mumbai',    'India', 'Kokilaben Dhirubhai Ambani Hospital',      'contact@kokilaben.in',        4.90, 'LIC-IN-NEUR-001', now()),
+  (gen_random_uuid(), 'Dr. Sanjay Verma',     'Neurology',        'MD (Neurology)',           14, 'Delhi',     'India', 'Max Super Speciality Hospital',            'contact@maxdel.in',           4.50, 'LIC-IN-NEUR-002', now()),
+  (gen_random_uuid(), 'Dr. Ananya Krishnan',  'Neurology',        'DNB (Neurology)',          9,  'Bangalore', 'India', 'Manipal Hospital',                        'contact@manipalblr.in',       4.40, 'LIC-IN-NEUR-003', now()),
+  (gen_random_uuid(), 'Dr. Meera Pillai',     'Dermatology',      'MD (Dermatology)',         11, 'Bangalore', 'India', 'Narayana Health',                         'contact@narayanablr.in',      4.70, 'LIC-IN-DERM-001', now()),
+  (gen_random_uuid(), 'Dr. Vikram Joshi',     'Dermatology',      'MBBS, MD (Dermatology)',   8,  'Mumbai',    'India', 'Breach Candy Hospital',                   'contact@breachcandy.in',      4.30, 'LIC-IN-DERM-002', now()),
+  (gen_random_uuid(), 'Dr. Pooja Agarwal',    'Dermatology',      'MD (Dermatology)',         13, 'Delhi',     'India', 'Sir Ganga Ram Hospital',                  'contact@sgrhdel.in',          4.60, 'LIC-IN-DERM-003', now()),
+  (gen_random_uuid(), 'Dr. Suresh Patel',     'Orthopedics',      'MS (Orthopedics)',         20, 'Bangalore', 'India', 'BGS Gleneagles Global Hospital',           'contact@bgsglobal.in',        4.80, 'LIC-IN-ORTH-001', now()),
+  (gen_random_uuid(), 'Dr. Divya Menon',      'Orthopedics',      'MS (Orthopedics)',         16, 'Chennai',   'India', 'MIOT International Hospital',             'contact@miotchennai.in',      4.70, 'LIC-IN-ORTH-002', now()),
+  (gen_random_uuid(), 'Dr. Rahul Chandra',    'Orthopedics',      'MS (Ortho), DNB',          7,  'Delhi',     'India', 'Safdarjung Hospital',                     'contact@safdarjung.in',       4.20, 'LIC-IN-ORTH-003', now()),
+  (gen_random_uuid(), 'Dr. Asha Iyer',        'General Medicine', 'MD (General Medicine)',    22, 'Chennai',   'India', 'Vijaya Hospital',                         'contact@vijayachennai.in',    4.90, 'LIC-IN-GEN-001',  now()),
+  (gen_random_uuid(), 'Dr. Nikhil Bose',      'General Medicine', 'MBBS, MD (Medicine)',      10, 'Bangalore', 'India', 'Aster CMI Hospital',                      'contact@astercmi.in',         4.50, 'LIC-IN-GEN-002',  now()),
+  (gen_random_uuid(), 'Dr. Sunita Kapoor',    'General Medicine', 'MD (Internal Medicine)',   17, 'Mumbai',    'India', 'Lilavati Hospital',                       'contact@lilavati.in',         4.80, 'LIC-IN-GEN-003',  now())
+ON CONFLICT (license_number) DO NOTHING;
