@@ -152,7 +152,7 @@ const DoctorSearch = () => {
   };
 
   /* ── Filter panel (shared between sidebar and mobile drawer) ── */
-  const FilterPanel = () => (
+  const renderFilterPanel = () => (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="font-semibold text-gray-800 dark:text-gray-100 text-sm">Filters</h2>
@@ -269,14 +269,14 @@ const DoctorSearch = () => {
       {/* Mobile collapsible filters */}
       {filtersOpen && (
         <div className="md:hidden mb-4 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-5 animate-[slideDown_0.15s_ease-out]">
-          <FilterPanel />
+          {renderFilterPanel()}
         </div>
       )}
 
       <div className="flex gap-6 items-start">
         {/* Desktop sidebar */}
         <aside className="hidden md:block w-56 shrink-0 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-5 sticky top-24">
-          <FilterPanel />
+          {renderFilterPanel()}
         </aside>
 
         {/* Results */}
